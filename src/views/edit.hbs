@@ -1,3 +1,23 @@
-<h1>Edit</h1>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis optio iusto reprehenderit maiores nihil obcaecati perferendis odio aperiam itaque.</p>
+<form action='/edit/{{task._id}}' method='POST'>
+  <div>
+    <label for='title'>Change the title:</label>
+    <input
+      type='text'
+      name='title'
+      placeholder='title'
+      id='title'
+      value='{{task.title}}'
+    />
+  </div>
+  <div>
+    <label for='description'>Change the Description:</label>
+    <textarea
+      name='description'
+      placeholder='Description'
+      id='description'
+      cols='30'
+      rows='10'
+    >{{task.description}}</textarea>
+  </div>
+  <button>Edit</button>
+</form>
